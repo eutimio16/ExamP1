@@ -524,7 +524,28 @@ button {
   .row.gutter-medium > .column, .row.gutter-medium > .columns {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem; }
+.ColorT{
+    color: darkblue;    
+    
+}
 
+
+.br{
+    
+      border-left: 6px solid red;
+    background-color: lightgrey;
+}
+.cv{
+    
+    color: forestgreen
+}
+.cr{
+    color:red;
+}
+.cf{
+    
+    color: lightskyblue;
+}
 .column, .columns {
   width: 100%;
   float: left;
