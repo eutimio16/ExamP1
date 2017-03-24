@@ -1,0 +1,23 @@
+.flex-container {
+	display: flex;
+}
+
+.flex-container > *{
+	margin: .25rem !important;
+}
+
+.flex-container > *:first-child {
+	min-width: 150px;
+}
+
+.flex-0 {
+	flex: 0;
+}
+
+.flex-1{
+	flex: 1;
+}
+
+.front{
+	background: url('../img/frontpage.jpg');
+}
