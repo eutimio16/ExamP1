@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="text/javascript" src="../../dist/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Scripts para manejar barra de inicio y contenido -->
+	<script src="js/sidebar.js"></script> 
+	<script src="js/main.js"></script> 
+
+	<title>Admin Panel</title>
+	<script type="text/javascript">
+	
+		$('#myModal').on('shown.bs.modal', function () {
+	  	$('#myInput').focus()
+	})
+</script>
+
+</head>
+<body>
+	<header class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="navbar-header">
+	    
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+	      <span class="sr-only">Toggle</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    
+	   <a href="../../index.html" class="navbar-brand">Panel de Administración</a>      
+	    
+	  </div>
+	   
+	  <div class="sidebar-collapse">
+	    
+	    <ul class="nav navbar-nav sidebar-menu">
+	      <li class="active jumpto" id="main"><a href="#">Buzón</a></li>
+	      <li class="jumpto" id="progressbar"><a href="#">En progreso</a></li>
+	      <li class="jumpto" id="completes"><a href="#">Terminados</a></li>
+	    </ul>	  
+	  </div>
+	</header>
+
+	<!-- contenido -->
+	<div class="wrapper" id="contentmain">
+		<div class="page-wrapper" id="template-container">
+	  	<template id="record-template"> 	  
+	     <div class="row row-template" style="padding: 30px">
+	      <a href="#" class="list-group-item">
+	      	<div class="row">
+	      		<div class="col-md-2 col-md-offset-10">
+	      			Hace 2 días
+	      		</div>
+
+	      	</div>
+
+	      	 <div class="row">
+		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Nombre </h3>
+		      	<h5 class="record-name"> Ana Gabriela</h5>
+		      	</div>
+		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Solicita </h3>
+		      	<h5 class="record-spec"> Cardiologo</h5>
+		      	</div>   
+		      	<div class="col-md-2"><h3 class="list-group-item-heading" > Centro </h3>
+		      	<h5 class="record-loc"></h5>
+		      	</div>   
+		      	<div class="col-md-2"><h3 class="list-group-item-heading" > Nacionalidad </h3>
+		      	<h5 class="record-nat"> Mexicana</h5>
+		      	</div>   
+		      	<div class="col-md-2"><h3 class="list-group-item-heading" > Contacto </h3>
+		      	<h5 class="record-email"> email@email.com</h5>
+		      	</div>   
+		   	</div>
+		   	<div class="row">
+				<div class="col-md-12"><h4 class="list-group-item-heading" >Comentarios </h4>
+					<h6 class="record-comments"> email@email.com</h6>
+			   	</div>
+		   	</div>
+		   	<div class="row">
+		   		<div class="col-md-9 col-md-push-3" style ="text-align: right">
+			   		<span href="#" class="btn btn-success" id="accept">Iniciar Proceso</span>
+			   		<span href="#" class="btn btn-danger" id="del">Eliminar Registro<span>
+		   	   </div>
+		   	</div>
+ 		  </a>
+	  	</div>  
+	  </template>
+	  </div>
+  	</div>
+
+
+
+	<!-- en progreso -->
+	<div class="wrapper"  id="contentprogressbar" style="display: none">   
+
+		<div class="page-wrapper" id="prog-container"> 
+
+		<!-- Aqui van los templates del progreso -->
+
+		</div>
+	</div>
+
+
+
+
+
+	<!-- terminados -->
+
+	 <div class="wrapper" id="contentcompletes" style="display: none"	>
+	  <div class="page-wrapper">
+	     <div class="row" style="padding-top: 25px">
+	      <a href="#" class="list-group-item">
+	      	<div class="row">
+		      	<div class="col-md-12"><h3 class="list-group-item-heading" > Nombre </h3>
+		      		<h5 class="record-name"> Ana Gabriela</h5>
+		      	</div>
+		      	<div class="row" style="padding-left: 14px">
+		      		<div class="col-md-6"><h3 class="list-group-item-heading" > Doctor/a </h3>
+		      			<h5 id="Nombre"> Mario Lopez </h5>
+		      		</div> 
+		      		<div class="col-md-6">
+		      			<h3 class="list-group-item-heading" > Especialidad</h3> <h5> Oncologia </h5>
+		      		</div> 
+		      	</div>  
+		   	</div>
+		   	<div class="row">
+		   		<div class="col-md-12" >
+		   			<span>Fecha de Ingreso</span>
+		   	   </div>
+		   		<div class="col-md-2" >
+		   			<h3> 05-May-2017 </h3>
+					
+	   	   		</div>
+	   	   		<div class="col-md-10" style ="text-align:right;">
+	   	   			<span href="#" class="btn btn-success">Enviar Encuesta de Retroalimentación</span>
+	   	   		</div>
+	   		</div>
+	   	</a>
+	  </div>  
+	 </div>
+  	</div>
+
+
+
+
+
+
+
+<!-- template del progreso-->
+<template id="progress-template">
+	<div class="row col-lg-14 center-block" style="padding-top: 30px"> 
+	<div class="list-group-item"> 
+
+		<a class="btn btn-danger btn-sm" style="float:right" id="del"> X </a>
+		<h4 id="record-name"> Paola Francisca</h4> 
+		<span id="record-loc"> Colima </span> <span>/</span><span id="record-spec"> Cardiology </span> <span>/</span> <span id="record-email"> p_fran@gmail.com</span> 
+		
+
+
+		<div class="row bs-wizard" style="border-bottom:0;">
+
+
+			<div class="col-md-4 bs-wizard-step" id="status-1" >
+				<div class="text-center bs-wizard-stepnum">Generar Expediente</div><!-- muestra texto encima del paso -->
+				<div class="progress"><div class="progress-bar"></div></div>
+				<a href="#" class="bs-wizard-dot" ></a> <!--acionlistener -->
+				<div class="bs-wizard-info text-center"><a href="#" class="btn btn-primary" id="terminado-1"> Terminado </a></div>
+	
+			</div>
+
+			<div class="col-md-4 bs-wizard-step"  id="status-2" data-toggle="modal" data-target="#checkModal"><!-- utiliza este para el paso actual -->
+				<div class="text-center bs-wizard-stepnum">Asignación Médico</div>
+				<div class="progress"><div class="progress-bar"></div></div>
+				<a href="#" class="bs-wizard-dot"></a>
+				<div class="bs-wizard-info text-center"><a href="#" class="btn btn-primary" id="terminado-2"> Enviar </a></div>
+				<div class="bs-wizard-info text-center">Ultimo Enviado <span id="time">27-02-2017</span></div>
+			</div>
+			
+			<div class="col-md-4 bs-wizard-step"  id="status-3"><!-- utiliza este para pasos por completar -->
+				<div class="text-center bs-wizard-stepnum"> Fecha de Ingreso </div>
+				<div class="progress"><div class="progress-bar"></div></div>
+				<a href="#" class="bs-wizard-dot"></a>
+				<div class="bs-wizard-info text-center"><a href="#" class="btn btn-primary" id="terminado-3"> Finalizar </a></div>
+			</div>
+		</div>   
+	</div>
+	</div>
+</template>
+
+
+
+
+<!-- Modal para Checklist -->
+<div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirmación de Envio</h4>
+      </div>
+      <div class="modal-body">
+        El mensaje fue enviado a ___
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>

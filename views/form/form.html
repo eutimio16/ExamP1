@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Esta parte direeciona las carpetas -->
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<script src="../../dist/jquery-3.1.1.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			document.getElementById("loc").innerHTML = localStorage.getItem("locale");
+			document.getElementById("spec").innerHTML = localStorage.getItem("speciality");
+		});
+
+	</script>
+
+	<title>Form</title>
+</head>
+
+<body >
+	<!-- Aqui empieza la barra de navegacion -->
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../index.html">Puerta de Hierro</a>
+    </div>
+    </div>
+  </div>
+</nav>
+<!-- Aqui termina la barra de navegacion-->
+
+<!-- Empieza el cuadro de texto -->
+
+
+
+<div class="col-md-3" ></div>
+<div class="col-md-6" >
+<div class="well" style="background-color: #dcdcdc ">
+
+	<h2 id="loc"></h2>
+	<h4 id="spec"></h4>
+	<p> Please fill the following spaces with the data asked. </p>
+
+</div>
+
+<form class="form-inline" style="background-color: #dcdcdc">
+	<div class="form-group"  style="margin: 2%"  >
+
+	  <label class="control-label" for="Name" > Name </label >
+	  <input class="form-control input-sm" type="text" id="name" style="height: 15%; width: 195px; " placeholder="Name" >
+	</div>
+
+	<div class="form-group"  style="margin: 2%">
+	  <label class="control-label" for="Last Name"  > Last Name </label >
+	  <input class="form-control input-sm" type="text" id="lname" style="height: 15%; width: 195px; " placeholder="Last name" >
+	</div>
+
+	<div class="form-group"  style="margin: 2%">
+	  <label class="control-label" for="email"  > Email </label >
+	  <input class="form-control input-sm" type="text" id="email" style="height: 15%; width: 195px; " placeholder="Email" >
+	</div>
+
+	 <div class="form-group" style="margin: 2%" >
+	         <label class="control-label" for="Nationality"  > Nationality </label >
+	        <select class="form-control" id="selection" style="height: 15%; width: 195px; ">
+	        <option value="American">American</option>
+	  		<option value="Canadian">Canadian</option>
+	  		<option value="Mexican">Mexican</option>
+	        </select>
+	  </div>
+
+	<div class="form-group"  style="margin: 2%">
+	      <label class="control-label" for="comments"  > Comments </label >
+	        <textarea class="form-control" rows="3" id="comment" style="width: 550px" ></textarea>
+	        <span class="help-block" style="text-align: center;">Any additional comments will be useful for us.</span>
+	      </div>
+
+	 <div class="row">
+	 <div class="form-group" style="margin-left:  85%; margin-bottom: 2% ">
+	     	<a class="btn btn-primary" type="button" id="sub" >Submit</a>
+	    </div>
+	 </div>
+
+	</div>
+<!-- Termina cuadro de texto -->
+
+</body>
+<script type="text/javascript" src="send_form.js"></script>
+
+</html>
